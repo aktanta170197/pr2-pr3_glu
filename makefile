@@ -12,4 +12,7 @@ utili.o: utili.cpp
 	g++ -c -fPIC utili.cpp
 clean:
 	rm -f *.o *.so binary
-	
+build-tests:
+	g++ -o tests/newsimpletest tests/newsimpletest.cpp utili.cpp
+test:
+	tests/newsimpletest
